@@ -7,8 +7,8 @@ app.config.from_object("src.config.BaseConfig")
 
 # for health check
 @app.route('/health', methods=['GET'])
-def health() -> int:
-    return 200
+def health() -> str:
+    return '200'
 
 
 from src.api.test import api as api_test
