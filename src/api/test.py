@@ -7,7 +7,7 @@ api = Blueprint("api_test", __name__)
 def test() -> object:
     response = {
         "status": "success",
-        "result": "test response"
+        "result": "This is test."
     }
 
     return jsonify(response)
