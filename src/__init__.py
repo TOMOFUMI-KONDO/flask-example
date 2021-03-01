@@ -4,6 +4,9 @@ from flask_cors import CORS
 app = Flask("app_name")
 app.config.from_object("src.config.BaseConfig")
 
+from src.model import db
+db.create_all()
+
 
 # for health check
 @app.route('/health', methods=['GET'])
